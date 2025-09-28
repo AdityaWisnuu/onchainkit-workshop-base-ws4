@@ -1,8 +1,6 @@
-const ROOT_URL =
-  process.env.NEXT_PUBLIC_URL ||
-  (process.env.VERCEL_PROJECT_PRODUCTION_URL
-    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
-    : "http://localhost:3000");
+const ROOT_URL = process.env.NEXT_PUBLIC_URL
+  ? `https://${process.env.NEXT_PUBLIC_URL}`
+  : "http://localhost:3000";
 
 /**
  * MiniApp configuration object. Must follow the Farcaster MiniApp specification.
@@ -37,6 +35,6 @@ export const minikitConfig = {
 } as const;
 
 export async function GET() {
-  const URL = process.env.NEXT_PUBLIC_URL as string;
+  //   const URL = process.env.NEXT_PUBLIC_URL as string;
   return Response.json(minikitConfig); // see the next step for the manifest_json_object
 }
