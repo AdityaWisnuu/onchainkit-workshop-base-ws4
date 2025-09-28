@@ -1,6 +1,5 @@
 "use client";
 
-import { WalletComponents } from "@/components/Wallet";
 import { Card, CardContent } from "@/components/ui/card";
 import { useRouter } from "next/navigation";
 
